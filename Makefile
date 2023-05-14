@@ -45,8 +45,9 @@ APOLLO3_SDK := third_party/AmbiqSuite-Rel2.2.0
 EXTRA_LIBS := \
 	$(APOLLO3_SDK)/boards_sfe/edge/bsp/gcc/bin/libam_bsp.a \
 	$(APOLLO3_SDK)/mcu/apollo3/hal/gcc/bin/libam_hal.a \
-	$(TOOLCHAIN_ROOT)/lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m+fp/hard/crtbegin.o \
 	-lm
+
+# EXTRA_LIBS += $(TOOLCHAIN_ROOT)/lib/gcc/arm-none-eabi/10.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
 # The startup_gcc.c file is an altered version of the examples/hello_world/gcc/startup_gcc.c
 # file from Ambiq:
